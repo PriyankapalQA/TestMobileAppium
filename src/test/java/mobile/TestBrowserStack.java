@@ -41,12 +41,11 @@ public class TestBrowserStack
 
 			caps.setCapability("device", "Google Nexus 6");
 			caps.setCapability("os_version", "6.0");
-			caps.setCapability("app", "bs://3175c5eee356a60ce320830bb9556586f88c58b4");   //use curl command to upload and get this bs value
+			caps.setCapability("app", "bs://3175c5eee356a60ce320830bb9556586f88c58b4");
 			caps.setCapability("browserstack.debug","TRUE");
 
 
 			driver = new AndroidDriver<WebElement>(new URL("https://"+userName+":"+accessKey+"@hub-cloud.browserstack.com/wd/hub"), caps);
-
 		}
 		catch(Exception e){
 			System.out.println(e.getMessage());
